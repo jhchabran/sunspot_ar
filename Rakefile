@@ -5,13 +5,18 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "sunspot_ar"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{ActiveRecord integration for the Sunspot Solr search library}
+    gem.description = %Q{Sunspot::ActiveRecord is an extension to the Sunspot library for Solr search.
+    Sunspot::ActiveRecord adds integration between Sunspot and ActiveRecord, including
+    defining search and indexing related methods on ActiveRecord models themselves,
+    running a Sunspot-compatible Solr instance for development and test
+    environment.}
     gem.email = "jh@chabran.fr"
     gem.homepage = "http://github.com/jhchabran/sunspot_ar"
-    gem.authors = ["JH. Chabran"]
+    gem.authors = ["Mat Brown", "Peer Allan", "Michael Moen", "Benjamin Krause", "Adam Salter", "Brandon Keepers", "Paul Canavese", "JH. Chabran"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_runtime_dependency "escape", ">= 0.0.4"
+    gem.add_runtime_dependency "sunspot", "= 1.1.0"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
