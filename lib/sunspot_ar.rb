@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'activerecord'
 require 'sunspot'
+require 'sunspot_ar/configuration'
 require 'sunspot_ar/adapters'
 require 'sunspot_ar/searchable'
 
