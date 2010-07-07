@@ -57,6 +57,10 @@ describe Sunspot::ActiveRecord::Configuration, "default values" do
   it "should handle the 'auto_commit_after_delete_request' propery when not set" do
     @config.auto_commit_after_delete_request?.should == false
   end
+  
+  it "should handle the 'disabled' property when not set" do
+    @config.disabled?.should == false
+  end
 end
 
 describe Sunspot::ActiveRecord::Configuration, "user settings" do

@@ -245,6 +245,13 @@ module Sunspot #:nodoc:
         @max_memory ||= user_configuration_from_key('solr', 'max_memory')
       end
       
+      #
+      # Disable any SOLR integration (useful during tests)
+      #
+      def disabled?
+        @disabled ||= (user_configuration_from_key('solr', 'disabled') || false)
+      end
+      
       private
       
       #
