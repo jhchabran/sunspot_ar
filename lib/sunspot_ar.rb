@@ -5,9 +5,9 @@ require 'sunspot_ar/configuration'
 require 'sunspot_ar/adapters'
 require 'sunspot_ar/searchable'
 
-Sunspot::Adapters::InstanceAdapter.register(Sunspot::Rails::Adapters::ActiveRecordInstanceAdapter, ActiveRecord::Base)
-Sunspot::Adapters::DataAccessor.register(Sunspot::Rails::Adapters::ActiveRecordDataAccessor, ActiveRecord::Base)
+Sunspot::Adapters::InstanceAdapter.register(Sunspot::ActiveRecord::Adapters::ActiveRecordInstanceAdapter, ActiveRecord::Base)
+Sunspot::Adapters::DataAccessor.register(Sunspot::ActiveRecord::Adapters::ActiveRecordDataAccessor, ActiveRecord::Base)
 
-unless Sunspot::ActiveRecord.config.disabled
-  ActiveRecord::Base.module_eval { include(Sunspot::Rails::Searchable) }
-end
+
+ActiveRecord::Base.module_eval { include(Sunspot::ActiveRecord::Searchable) }
+

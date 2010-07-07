@@ -1,5 +1,5 @@
 module Sunspot #:nodoc:
-  module Rails #:nodoc:
+  module ActiveRecord #:nodoc:
     # 
     # This module provides Sunspot Adapter implementations for ActiveRecord
     # models.

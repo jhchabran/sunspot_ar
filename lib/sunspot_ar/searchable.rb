@@ -1,5 +1,5 @@
 module Sunspot #:nodoc:
-  module Rails #:nodoc:
+  module ActiveRecord #:nodoc:
     # 
     # This module adds Sunspot functionality to ActiveRecord models. As well as
     # providing class and instance methods, it optionally adds lifecycle hooks
