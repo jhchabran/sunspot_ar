@@ -39,6 +39,7 @@ end
 Spec::Runner.configure do |config|
   load_schema
   Sunspot.remove_all!
+  Sunspot::ActiveRecord.install
   
   config.before(:suite) do
       DatabaseCleaner.strategy = :transaction

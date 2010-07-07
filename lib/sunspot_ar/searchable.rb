@@ -1,5 +1,20 @@
-module Sunspot #:nodoc:
+module Sunspot #:nodoc:  
   module ActiveRecord #:nodoc:
+    module DummySearchable #:nodoc:
+      class <<self
+        def included(base) #:nodoc:
+          base.module_eval do
+            extend(ActsAsMethods)
+          end
+        end
+      end
+      
+      module ActsAsMethods
+        def searchable(*args, &block)
+        end
+      end
+    end
+    
     # 
     # This module adds Sunspot functionality to ActiveRecord models. As well as
     # providing class and instance methods, it optionally adds lifecycle hooks
