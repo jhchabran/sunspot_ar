@@ -2,6 +2,7 @@ require 'sunspot'
 require 'sunspot_ar/configuration'
 require 'sunspot_ar/adapters'
 require 'sunspot_ar/searchable'
+require 'active_record'
 
 module Sunspot
   module ActiveRecord
