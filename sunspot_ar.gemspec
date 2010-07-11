@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
 
   s.add_development_dependency "rspec", ">= 1.2.9"
+  s.add_development_dependency "database_cleaner"
+  s.add_development_dependency "sqlite3"
   s.add_runtime_dependency "escape", ">= 0.0.4"
   s.add_runtime_dependency "sunspot", "= 1.1.0"
 
