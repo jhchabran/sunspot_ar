@@ -293,7 +293,7 @@ module Sunspot #:nodoc:
             path = Sunspot::ActiveRecord.config
             if File.exist?(path)
               File.open(path) do |file|
-                YAML.load(file)[Sunspot::ActiveRecord.environment.to_s]
+                YAML.load(ERB.new(File.open(file).read).result)[Sunspot::ActiveRecord.environment.to_s]
               end
             else
               {}
