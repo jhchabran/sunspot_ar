@@ -9,6 +9,7 @@ require 'sunspot_ar'
 require 'spec'
 require 'spec/autorun'
 require 'database_cleaner'
+require 'logger'
 
 TEST_DATABASE_FILE = File.join(File.dirname(__FILE__), '..', 'test.sqlite3')
 ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__), "activerecord.log"))
