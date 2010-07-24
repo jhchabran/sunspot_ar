@@ -1,0 +1,2 @@
+Git needs a file in a dir to get it committed. 
+This db directory is required to let ActiveRecord create the database while running specs.
